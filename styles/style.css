@@ -3,21 +3,54 @@ body{
     margin: 0;
 }
 
-div.background-images{
+.background-principal{
+    margin: 0;
+}
+
+.background-images{
     display: flex;
-    position: fixed;
     gap: 5px;
+    position: fixed;
 }
 
-div.background1 img, div.background2 img, div.background3 img{
-    height: 100%;
-    width: 450px;
+.background1, .background2, .background3{
+    position: relative;
+    display: inline-block;
+}
+
+.img-office img, .img-beauty img, .img-snacks img{
+    height: 40em;
+    width:450px ;
+    object-fit: cover;
     border-radius: 5px;
+    display: block;
 }
 
-div.background1 img:hover, div.background2 img:hover, div.background3 img:hover{
-    cursor: pointer;
+.img-office img:hover, .img-beauty img:hover, .img-snacks img:hover{
     opacity: 50%;
+}
+
+.btn-office button, .background2 button, .background3 button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 5em;
+    opacity: 0;
+    font-family: "Caveat", cursive;
+}
+
+.btn-office button:hover, .background2 button:hover, .background3 button:hover{
+    color: rgb(216, 95, 115);
+    background-color: #fffaf1;
+    padding: 20px;
+    opacity: 1;
+    border-radius: 15px;
+    border: solid 4px rgb(185, 179, 172);
 }
 
 header{
@@ -33,19 +66,11 @@ header:hover{
     cursor: pointer;
 }
 
-header h2{
-    font-family: "Caveat", cursive;
-    letter-spacing:  3px;
-    font-weight: lighter;
-    color: black;
-    margin-bottom: 0;
-}
-
-div.web-title{
+.web-title{
     display:  flex;
     gap: 2em;
-    padding: 2em;
-    padding-top: 0;
+    padding: 1em;
+    align-items: center;
 }
 
 header h1{
